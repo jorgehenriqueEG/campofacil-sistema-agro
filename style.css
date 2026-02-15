@@ -1,0 +1,53 @@
+* { box-sizing: border-box; transition: 0.3s; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    margin: 0; min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('foto-fundo-app.png');
+    background-size: cover; background-attachment: fixed;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.app-container { width: 100%; max-width: 1100px; text-align: center; color: white; padding: 20px; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+
+.menu-btn {
+    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;
+    padding: 20px; color: white; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.menu-btn:hover { background: rgba(46, 125, 50, 0.4); transform: translateY(-3px); border-color: #4caf50; }
+.menu-btn i { font-size: 2rem; margin-bottom: 5px; }
+
+/* MODAL */
+.screen-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; display: flex; justify-content: center; align-items: center; }
+.hidden { display: none !important; }
+.screen-content-box { background: #fdfdfd; color: #333; width: 95%; max-width: 900px; padding: 25px; border-radius: 15px; max-height: 90vh; overflow-y: auto; text-align: left; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; margin-bottom: 20px; }
+.close-btn { font-size: 30px; border: none; background: none; cursor: pointer; color: #777; }
+
+/* TABELAS E DADOS */
+.agro-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
+.agro-table th { background: #eee; padding: 10px; text-align: left; color: #444; }
+.agro-table td { padding: 10px; border-bottom: 1px solid #ddd; }
+
+/* NOVOS COMPONENTES */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+input, select { width: 100%; padding: 10px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 6px; }
+.btn-action { background: #2e7d32; color: white; padding: 12px; border: none; border-radius: 6px; width: 100%; cursor: pointer; font-weight: bold; }
+.btn-whatsapp { background: #25D366; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; display: inline-flex; align-items: center; gap: 5px; }
+.btn-print { background: #555; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+/* BARRA DE SAÚDE DO ESTOQUE */
+.stock-bar-bg { width: 100%; background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 5px; }
+.stock-bar-fill { height: 100%; background: #4caf50; }
+
+/* IMPRESSÃO (TICKET) */
+.print-only { display: none; }
+@media print {
+    .no-print { display: none !important; }
+    body { background: white; color: black; display: block; }
+    .print-only { display: block; padding: 20px; border: 1px solid #000; margin: 20px; }
+    .ticket-header { text-align: center; border-bottom: 1px dashed #000; padding-bottom: 10px; margin-bottom: 10px; }
+    .ticket-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+}
