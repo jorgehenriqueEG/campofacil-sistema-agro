@@ -1,26 +1,27 @@
-# campofacil-sistema-agro
-Sistema de gestão para controle de clientes, produtos, vendas e estoque no setor agro.
-Sobre o Projeto
+CampoFácil – Agricultural Management System
+Overview
 
-O CampoFácil é um sistema de gestão voltado para o setor agro, com foco no controle de clientes, produtos, vendas e estoque.
+CampoFácil is a web-based management system designed for small agricultural businesses and producers.
 
-O projeto está em desenvolvimento e tem como objetivo aplicar conceitos reais de desenvolvimento web, banco de dados e regras de negócio.
+The system focuses on client management, product inventory control, sales tracking, and business rule validation to prevent operational errors such as selling products without available stock.
 
- Objetivo
+This project is being developed to apply real-world software engineering concepts, including backend architecture, database integration, and business logic validation.
 
-Criar uma solução simples e funcional para pequenos produtores e comércios do setor agro que precisam:
+Core Features (Current & In Progress)
 
-Organizar cadastro de clientes
+Client registration and management
 
-Controlar estoque de produtos
+Product inventory control
 
-Registrar vendas
+Sales registration
 
-Acompanhar histórico de movimentações
+Stock validation before sale completion
 
-Evitar vendas sem estoque disponível
+Movement history tracking
 
-Tecnologias Utilizadas (atual)
+Technical Stack
+
+Frontend:
 
 HTML5
 
@@ -28,51 +29,53 @@ CSS3
 
 JavaScript
 
- Status do Projeto
+Backend (In Development):
 
- Em desenvolvimento
+PHP
 
-Atualmente contém a estrutura inicial do frontend.
-As próximas etapas incluem:
+MySQL
 
-Implementação do backend em PHP
+Architecture:
 
-Integração com banco de dados MySQL
+Separation between frontend and backend
 
-Desenvolvimento de CRUD completo
+Relational database modeling (clients, products, sales)
 
-Controle automático de estoque
+Business rule validation layer
 
-Validações de regras de negócio
+Technical Roadmap
 
- Planejamento Técnico
+Secure database connection
 
-Futuras implementações:
+Full CRUD implementation
 
-Conexão segura com banco de dados
+Automated stock updates
 
-Modelagem relacional (clientes, produtos, vendas)
+Authentication system
 
-Sistema de autenticação
+Admin dashboard
 
-Dashboard administrativo
+Reporting system
 
-Relatórios e controle de histórico
+Project Status
 
-Estrutura Atual
-campofacil-sistema-agro/
-│
-├── assets/
-├── index.html
-├── style.css
-└── README.md
+Active development.
+The backend integration and business logic validations are currently being implemented.
 
- Autor
+Purpose
+
+This project simulates a real-world business management system to demonstrate practical skills in:
+
+Full-stack development
+
+Database modeling
+
+Backend validation
+
+Software architecture organization
+
+Author
 
 Jorge Henrique
-Estudante de Engenharia da Computação
-Interesse em Desenvolvimento Web e Machine Learning
-
- Evolução do Projeto
-
-Este repositório será atualizado conforme novas funcionalidades forem implementadas.
+Computer Engineering Student
+Focused on Software Development and Machine Learning
