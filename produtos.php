@@ -9,7 +9,6 @@ if (!isset($_SESSION['vendedor_id'])) {
 
 $vendedor_id = $_SESSION['vendedor_id'];
 
-// CADASTRAR PRODUTO
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $valor = $_POST['valor'];
@@ -20,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 }
 
-// LISTAR PRODUTOS
 $produtos = $conn->query("SELECT * FROM produtos WHERE vendedor_id = $vendedor_id ORDER BY id DESC");
 ?>
 
@@ -57,4 +55,5 @@ $produtos = $conn->query("SELECT * FROM produtos WHERE vendedor_id = $vendedor_i
             <?php endwhile; ?>
         </table>
     </div>
+
 </div>
